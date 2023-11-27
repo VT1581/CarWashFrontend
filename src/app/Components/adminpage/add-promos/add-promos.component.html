@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="container-close" [routerLink]="'/admin'">&times;</div>
+    <img src="https://media.istockphoto.com/id/1136155337/vector/promo-code-coupon-code-flat-vector-set-design-illustration-on-white-background.jpg?s=612x612&w=0&k=20&c=sM95EWp2rPqPfp0pGxKi4Jkjgz-0buvGtSSZkNQYIao="
+        alt="image">
+    <div class="container-text">
+        <h2>Add Promocode</h2>
+        <input type="text" [(ngModel)]="promocodes.code" required name="code" placeholder="Enter Promocode Code"
+            matInput>
+
+        <input type="text" [(ngModel)]="promocodes.discount" required name="discount" placeholder="Enter Discount" matInput>
+
+
+        <input type="text" [(ngModel)]="promocodes.expDate" required name="expiryDate"
+            placeholder="Enter Expiry Date" matInput>
+
+        <!-- <button mat-raised-button (click)="formSubmit()" color="primary">Add</button> -->
+        <a (click)="formSubmit()" mat-raised-button color="primary">ADD</a>
+        <!-- [routerLink]="'/admin/washpack/'" -->
+    </div> 
+</div>
+
+

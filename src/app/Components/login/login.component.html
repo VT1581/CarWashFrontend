@@ -1,0 +1,46 @@
+[20:00] Chittipolu, Pravallika
+<app-navbar></app-navbar>
+<div class="container mt-5">
+<div class="card " style="padding:20px;">
+<form ngNativeValidate #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <input type="text" ngModel name="username" id="username"
+           placeholder="Enter your username" autocomplete="username"
+           class="form-control mb-3" required #usernameInput="ngModel">
+ 
+    <!-- Display error message when the username is not provided -->
+    <div *ngIf="usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)">
+      <div class="alert alert-danger">
+        Username is required.
+      </div>
+    </div>
+    <div>
+    <input type="{{showPassword?'text':'password'}}" ngModel name="password" id="password"
+           placeholder="Enter your password"
+           class="form-control" required #passwordInput="ngModel">
+           <mat-icon class="eye-icon icon" (click)="togglePasswordVisibility()" style="cursor: pointer;" >
+             {{ showPassword ? 'visibility' : 'visibility_off' }}
+           </mat-icon>
+          </div>
+ 
+           
+ 
+    <!-- Display error message when the password is not provided -->
+    <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">
+      <div class="alert alert-danger">
+        Password is required.
+      </div>
+    </div>
+ 
+    <input type="submit" value="Login"
+           class="btn btn-outline-primary form-control rounded-0" required>
+    <br>
+    <br>
+    <button type="button" class="btn btn-outline-primary form-control rounded-0"
+            (click)="registerUser()">Create an account</button>
+  </form>
+  <div *ngIf="errorMessage" class="alert alert-danger">
+  {{ errorMessage }}
+</div>
+ 
+</div>
+</div>

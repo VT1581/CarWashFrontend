@@ -1,0 +1,28 @@
+<h1 style="text-align: center;"><b>Washpacks Details</b></h1>
+<div id="login-container">
+    <table class="washpack-table">
+      <thead>
+        <tr>
+          <th>Washpack Name</th>
+          <th>Service Charges</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let w of washpacks">
+          <td>{{ w.washpackName }}</td>
+          <td>Rs. {{ w.washpackPrice }}</td>
+          <td>{{ w.description }}</td>
+          <td>
+            <!-- <button (click)="updateWashpack(w.washpackId)" class="action-button" color="basic">Update</button> -->
+            <button (click)="deleteWashpack(w.washpackId)" class="action-button" color="warn">Delete</button>
+            <a [routerLink]="'update-washpacks/'+ w.washpackId" mat-raised-button color="Info">Update</a> 
+            
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

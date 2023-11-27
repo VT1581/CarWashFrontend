@@ -1,0 +1,63 @@
+.container {
+  background-image: url('../../../assets/fevicon_io/s4.png');
+  height: 84vh;
+  /* background-size: 100% 100%; */
+  /* background-repeat: no-repeat; */
+  font-family: Arial, sans-serif;
+  /* color: #fff; */
+  margin: -100;
+  padding: 10;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional, makes the image fixed while scrolling */
+  background-position: right center;
+  color: white;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height: 70vh;
+}
+
+
+.card {
+ 
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* .form-control1{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+} */
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+}
+
+input[type="submit"],
+button[type="button"] {
+  width: 100%;
+  padding: 5px;
+  background-color: #171718;
+  color: #fff;
+  border: none;
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #0056b3;
+}

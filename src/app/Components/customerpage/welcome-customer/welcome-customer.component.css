@@ -1,0 +1,99 @@
+body {
+    background-image: url(https://images8.alphacoders.com/568/568490.jpg);
+    height: 92vh;
+    /* background-size: 100% 100%; */
+    /* background-repeat: no-repeat; */
+    font-family: Arial, sans-serif;
+    /* color: #fff; */
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, makes the image fixed while scrolling */
+    background-position: center center;
+    color: white; 
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* height: 100vh; */
+    /* flex-direction: column;  */
+
+}
+/* button {
+    margin: 10px;
+} */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Makes the container full height */
+}
+.divider{
+    border: 2px solid #3d3d3d;
+    width: 12%;
+    margin: 0 auto 1.2rem auto;
+   
+   }
+
+/* .content {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.content .text {
+    position: relative;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.pepsi {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    width: 600px;
+    margin-top: 80px;
+    padding-left: 440px;
+    justify-content: flex-end;
+}
+welcome-box {
+    /* text-align: center;
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 0 auto; */
+    text-align: center;
+    width: 200px; 
+    height: 200px; 
+    background-color: #f6f6f6; 
+    margin: 0 auto;
+    margin-top: -250px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fbfeff;
+    position: relative;
+    opacity: 0.6;
+    flex-direction: column; /* Stack elements vertically within .welcome-box */
+    justify-content: center; 
+}

@@ -1,0 +1,27 @@
+
+<div id="login-container">
+    <h2>Promos Table</h2>
+    <hr />
+    <table class="promo-table">
+      <thead>
+        <tr>
+          <th>Promo Code</th>
+          <th>Discount</th>
+          <th>Expiry Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of promos">
+          <td>{{ p.code }}</td>
+          <td>{{ p.discount }}</td>
+          <td>{{ p.expDate }}</td>
+          <td>
+            <!-- <button mat-raised-button color="basic">Edit</button> -->
+            <button (click)="formSubmit(p.code)" mat-raised-button color="basic">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

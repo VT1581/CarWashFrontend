@@ -1,0 +1,21 @@
+<!-- <p>update-washpacks works!</p> -->
+<div class="container">
+    <div class="container-close" routerLink="/washpack">&times;</div>
+    <img src="https://img.freepik.com/free-photo/beautiful-car-washing-service_23-2149212221.jpg?w=900&t=st=1696272124~exp=1696272724~hmac=bde99c32aa3d2529959577d2a5449c838275459f3d0c334c3ed521d8312db6b7"
+        alt="image">
+    <div class="container-text">
+        <h2>Update Washpacks</h2>
+        <form (ngSubmit)="updateData()" #updateForm="ngForm">
+            <input type="text" [(ngModel)]="washpack.washpackName" required name="washpackName"
+                placeholder="Enter Washpacks name" matInput>
+
+
+            <input type="text" [(ngModel)]="washpack.washpackPrice" required name="washpackPrice" placeholder="Enter Amount" matInput>
+
+            <input type="text" [(ngModel)]="washpack.description" required name="description"
+                placeholder="Enter Description" matInput>
+
+            <button type="submit" mat-raised-button color="primary">Update</button>
+        </form>
+    </div>
+</div>

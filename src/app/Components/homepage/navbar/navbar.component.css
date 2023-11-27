@@ -1,0 +1,33 @@
+.custom-image {
+    margin-right: 10px;
+  }
+  .button {
+    background-color: #fbf8fa;
+    border: none;
+    color: rgb(74, 48, 48);
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    font-weight: bold;
+  }
+  .button:hover{
+    cursor: pointer;
+    color:rgb(47, 40, 40);
+  }
+  
+  .button4 {border-radius: 15px;
+  }
+  .navbar {
+    height: 65px; 
+    padding: 5px; 
+  }
+  .btn {
+  width: 80px; 
+  height: 35px; 
+  font-size: 15px;
+  }
+  
+  

@@ -1,0 +1,29 @@
+
+<h1 style="text-align: center;"><b>Order Details</b></h1><hr>
+<div class="container">
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Washpack Name</th>
+          <th>Car Model</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Payment Status</th>
+          <th>Email Address</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let o of order">
+          <td>{{ o.washpackName }}</td>
+          <td>{{ o.carModel }}</td>
+          <td>{{ o.amount }}</td>
+          <td>{{ o.date }}</td>
+          <td>{{ o.paymentStatus }}</td>
+          <td>{{ o.emailAddress }}</td>
+          <td>{{ o.address }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

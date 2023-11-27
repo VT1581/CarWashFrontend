@@ -1,0 +1,27 @@
+<!-- <p>update-washpacks works!</p> -->
+<div class="container">
+    <div class="container-close" routerLink="/washpack">&times;</div>
+    <img src="https://vid.alarabiya.net/images/2023/04/12/2d220739-e6e3-4f4a-86f0-672691659959/2d220739-e6e3-4f4a-86f0-672691659959.jpg?crop=1:1&width=1000%22"
+        alt="image">
+    <div class="container-text">
+        <h2>Update Orders</h2>
+        <form (ngSubmit)="updateData()" #updateForm="ngForm">
+            <input type="text" [(ngModel)]="order.washpackName" required name="washpackName"
+                placeholder="Enter Washpacks name" matInput     [disabled]="order.washpackName !== ''">
+
+
+            <input type="text" [(ngModel)]="order.carModel" required name="carModel" placeholder="Enter carModel" matInput >
+
+            <input type="text" [(ngModel)]="order.amount" required name="amount"
+                placeholder="Enter amount" matInput   [disabled]="order.amount !== 0">
+            <input type="text" [(ngModel)]="order.userName" required name="userName"
+                placeholder="Enter userName" matInput>
+            <input type="text" [(ngModel)]="order.emailAddress" required name="emailAddress"
+                placeholder="Enter emailAddress" matInput>
+            <input type="text" [(ngModel)]="order.address" required name="address"
+                placeholder="Enter address" matInput>
+            <button type="submit" mat-raised-button color="primary">Update</button>
+        </form>
+    </div>
+</div>
+

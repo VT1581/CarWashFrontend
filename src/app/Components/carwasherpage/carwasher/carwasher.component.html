@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-button (click)="opened = !opened">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+      <h3>GREEN CARWASH</h3>
+      <div class="spacer"></div>
+      <span class="button-container">
+      <!-- <button type="button"  >{{username}}</button> -->
+      <p>{{username}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button  *ngIf="!isLoggedIn()" routerLink="/login" type="button"  mat-raised-button  class="button button4 btn">Login</button>&nbsp;
+      <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()">Logout</button>&nbsp;
+    </span>
+    
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+      <mat-list>
+        <mat-list-item *ngFor="let link of navLinks">
+          <a [routerLink]="link.route" style="text-decoration: none; color: aliceblue;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" [attr.class]="link.iconClass" viewBox="0 0 16 16">
+              <path [attr.d]="link.iconPath" />
+            </svg>
+            {{ link.label }}
+          </a>
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

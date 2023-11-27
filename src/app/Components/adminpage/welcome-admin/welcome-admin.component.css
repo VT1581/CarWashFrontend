@@ -1,0 +1,121 @@
+body {
+
+    background-image: url(https://media.istockphoto.com/id/911192004/photo/car-view.jpg?s=612x612&w=0&k=20&c=OAKkNwpAlPP7pjPyvVUag92IP9Y_bROcH4EhE33Suxg=);
+
+    /* height: 100vh; */
+
+    background-size: 100% 100%;
+
+    background-repeat: no-repeat;
+
+    font-family: Arial, sans-serif;
+
+    color: rgb(245, 243, 243);
+
+    margin: 0;
+
+    padding: 2%;
+
+ 
+
+}
+
+.divider{
+
+    border: 2px solid #3d3d3d;
+
+    width: 12%;
+
+    margin: 0 auto 1.2rem auto;
+
+   
+
+   }
+
+ 
+
+.content {
+
+    padding: 20px;
+
+    text-align: center;
+
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+ 
+
+.content .text {
+
+    position: relative;
+
+    max-width: 600px;
+
+}
+
+ 
+
+h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+
+}
+
+ 
+
+p {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+.pepsi {
+
+    display: flex;
+
+    height: 100%;
+
+    position: absolute;
+
+    width: 600px;
+
+    margin-top: 80px;
+
+    padding-left: 440px;
+
+    justify-content: flex-end;
+
+}
+
+welcome-box {
+
+    text-align: center;
+
+    background: #fff;
+
+    padding: 5%;
+
+    border: 2px solid #000;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    max-width: 300px;
+
+    margin: 0 auto;
+
+}

@@ -1,0 +1,26 @@
+<!-- <p>place-order works!</p> -->
+<div class="container">
+    <div class="container-close" routerLink="/customer-dashboard/welcome-customer">&times;</div>
+    
+        <img src="https://vid.alarabiya.net/images/2023/04/12/2d220739-e6e3-4f4a-86f0-672691659959/2d220739-e6e3-4f4a-86f0-672691659959.jpg?crop=1:1&width=1000"
+        alt="image">
+    <div class="container-text">
+        <h2>Place Order Form</h2>
+        
+        <input type="text" [(ngModel)]="order.washpackName" required name="packname" placeholder="Enter Washpacks name"
+            matInput [disabled]="order.washpackName !== ''">
+
+        <input type="text" [(ngModel)]="order.amount" required name="amount" placeholder="Enter Amount" matInput  [disabled]="order.amount !== ''">
+
+
+
+        <input type="text" [(ngModel)]="order.carModel" required name="car-model" placeholder="Enter carModel" matInput>
+        <input type="text" [(ngModel)]="order.userName" required name="customerName"
+            placeholder="Enter Customer name" matInput [disabled]="order.userName !== ''">
+        <input type="text" [(ngModel)]="order.emailAddress" required name="emailAddress"
+            placeholder="Enter emailAddress" matInput>
+        <input type="text" [(ngModel)]="order.address" required name="address"
+            placeholder="Enter address" matInput>
+        <button mat-raised-button (click)="onSubmit()" color="primary">Add</button>
+    </div>
+</div>

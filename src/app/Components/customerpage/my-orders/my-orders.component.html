@@ -1,0 +1,32 @@
+<div class="container center" *ngFor="let or of order">
+    <div class="card order-background"  *ngIf="!showUpdateForm">
+        <h2>My Orders</h2>
+        <hr />
+       
+        <p class="para">Washpack Name: {{or.washpackName}}</p>
+        <p class="para">Car Model: {{or.carModel}}</p>
+        <p class="para">Amount: {{or.amount}}</p>
+        <p class="para">Date: {{or.date}}</p>
+        <p class="para">Payment Status: {{or.paymentStatus}}</p>
+        <p class="para">Email Address: {{or.emailAddress}}</p>
+        <p class="para">Address:{{or.address}}</p>
+      
+        <br>
+        <div class="social">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- <a [routerLink]="'/washpack/'+ o.orderId" mat-raised-button color="basic">Update</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <a mat-raised-button color="warn" (click)="deleteOrders(or.orderId)" *ngIf="or.paymentStatus === 'pending'">Cancel Order</a>
+            <button mat-raised-button color="basic" [routerLink]="['update-order', or.orderId]" *ngIf="or.paymentStatus === 'pending'">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button (click)="payment(or)" color="primary" *ngIf="or.paymentStatus === 'pending'">Payment</button>
+        </div>
+       
+        
+        
+              
+          </div>
+          
+
+    </div>
+

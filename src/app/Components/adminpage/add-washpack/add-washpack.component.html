@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="container-close" [routerLink]="'/admin'">&times;</div>
+    <img src="https://t3.ftcdn.net/jpg/06/47/80/02/360_F_647800209_oe1AltdtzAmOXvgYcgvvfrgux97tkt2R.jpg"
+        alt="image">
+    <div class="container-text">
+        <h2>Add Washpacks</h2>
+        <input type="text" [(ngModel)]="washpacks.washpackName" required name="packname" placeholder="Enter Washpacks name"
+            matInput>
+
+        <input type="text" [(ngModel)]="washpacks.washpackPrice" required name="amount" placeholder="Enter Amount" matInput>
+
+
+        <input type="text" [(ngModel)]="washpacks.description" required name="description"
+            placeholder="Enter Description" matInput>
+
+        
+        <a (click)="formSubmit()" mat-raised-button color="primary">ADD</a>
+    </div> 
+</div>
+
+

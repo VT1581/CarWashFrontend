@@ -1,0 +1,27 @@
+<!-- <p>view-washpacks works!</p> -->
+<div  class="imagebackground">
+    <p style="background-image:URL(https://cdn.wallpapersafari.com/47/96/XvogjA.gif;)"> </p>
+<!-- <img src="https://media.istockphoto.com/id/157502867/photo/water-drops-on-black-background.jpg?s=612x612&w=0&k=20&c=oMp4P_VCf94EHww1jEKASyBcHAB-FBKRu4v3wyHjV-Q="> -->
+<div id="container" *ngFor ="let w of washpacks">
+
+    <div class="profile-img"></div>
+    <h1>
+        {{w.washpackName}}
+    </h1>
+    <div class="description">
+        <p class="para">Service charges Rs.{{w.washpackPrice}}</p>
+
+        {{w.description}}
+    </div>
+    <div class="promocode">
+        <input name="promocode" style="width: 200px;  height: 25px" id="promocode" [(ngModel)]="promoCodes[w.washpackId]"  type="text" placeholder="Enter promocode here">
+        <a mat-raised-button style="background-color: #2d1dde; border-radius: 10px;"  (click)="promoapply(w)" *ngIf="!promoCodeApplied[w.washpackId]">apply</a>
+        
+    </div>
+    <div class="social">
+       
+        
+        <a  mat-raised-button  (click)="selectWashPack(w)">Select</a>
+    </div>
+</div>
+</div>

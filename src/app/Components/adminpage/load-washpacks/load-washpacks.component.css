@@ -1,0 +1,43 @@
+.washpack-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .washpack-table th, .washpack-table td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .washpack-table th {
+    background-color: #777e85;
+    color: #fff;
+  }
+  
+  .washpack-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .washpack-table tr:hover {
+    background-color: #d9d9d9;
+  }
+  
+  .action-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+  }
+  
+  .action-button[color="Info"] {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .action-button[color="warn"] {
+    background-color: #8a2a0d;
+    color: #fff;
+  }
+  

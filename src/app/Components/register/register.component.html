@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+<div class="card p-20" style="padding: 20px;">
+<form ngNativeValidate #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+<input type="text" ngModel name="username" id="username"
+             placeholder="Enter your username" autocomplete="username"
+             class="form-control mb-3" required #usernameInput="ngModel">
+<div *ngIf="usernameInput.touched && usernameInput.hasError('required')">
+<div class="alert alert-danger">
+          Username is required.
+</div>
+</div>
+ 
+      <input type="email" ngModel name="email" id="email"
+             placeholder="Enter your email" autocomplete="email"
+             class="form-control mb-3" required email #emailInput="ngModel">
+<div *ngIf="emailInput.touched && emailInput.hasError('required')">
+<div class="alert alert-danger">
+          Email is required.
+</div>
+</div>
+ 
+      <div *ngIf="emailInput.touched && emailInput.hasError('email')">
+<div class="alert alert-danger">
+          Invalid email format.
+</div>
+</div>
+ 
+      <input type="password" ngModel name="password" id="password"
+             placeholder="Enter your password"
+             class="form-control mb-3" required #passwordInput="ngModel">
+<div *ngIf="passwordInput.touched && passwordInput.hasError('required')">
+<div class="alert alert-danger">
+          Password is required.
+</div>
+</div>
+<select ngModel name="role" id="role" class="form-control mb-3" required #roleInput="ngModel">
+<option value="" disabled selected>Select your role</option>
+<option value="CUSTOMER">Customer</option>
+<option value="CARWASHER">Car Washer</option>
+</select>
+ 
+      <button type="submit" mat-raised-button>Register</button>
+</form>
+<div *ngIf="registrationSuccess" class="alert alert-success mt-3">
+      Registration successfull!
+</div>
+</div>
+</div>
